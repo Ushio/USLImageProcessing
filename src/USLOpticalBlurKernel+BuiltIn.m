@@ -8,13 +8,10 @@
 
 #import "USLOpticalBlurKernel+BuiltIn.h"
 
+#import "USLFunctions.h"
 static float gaussian(float x, float sigma)
 {
     return (1.0f / sqrtf(2.0f * M_PI * sigma * sigma)) * expf(- (x * x) / (2.0f * sigma * sigma));
-}
-static float remap(float value, float inputMin, float inputMax, float outputMin, float outputMax)
-{
-    return (value - inputMin) * ((outputMax - outputMin) / (inputMax - inputMin)) + outputMin;
 }
 
 @implementation USLOpticalBlurKernel(BuiltIn)
@@ -82,6 +79,27 @@ static float remap(float value, float inputMin, float inputMax, float outputMin,
     float *kernel = self.kernel;
     int h = self.height;
     int w = self.width;
+
+    
+    
+    // 境界線にアンチエイリアスをかける
+    float smoothBeg = 0.85f;
+    float smoothEnd = 0.95f;
+    float (^smoothCircleFilter)(float) = ^float(float distance){
+        if(distance < smoothBeg)
+        {
+            return 1.0f;
+        }
+        else if(distance < smoothEnd)
+        {
+            return remap(distance, smoothBeg, smoothEnd, 1, 0);
+        }
+        else
+        {
+            return 0.0f;
+        }
+    };
+    
     for(int y = 0 ; y < h ; ++y)
     {
         float yvalue = remap(y, 0, h - 1, -1, 1);
@@ -90,15 +108,13 @@ static float remap(float value, float inputMin, float inputMax, float outputMin,
             float xvalue = remap(x, 0, w - 1, -1, 1);
             
             float distanceFromOrigin = sqrtf(xvalue * xvalue + yvalue * yvalue);
-            if(distanceFromOrigin > 1.0)
-            {
-                kernel[y * w + x] = 0.0f;
-            }
+            kernel[y * w + x] *= smoothCircleFilter(distanceFromOrigin);
         }
     }
 }
 - (void)filterWithHeart
 {
+    // 現在は境界線のアンチエイリアスは無し
     float *kernel = self.kernel;
     int h = self.height;
     int w = self.width;
