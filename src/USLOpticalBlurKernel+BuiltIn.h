@@ -14,7 +14,8 @@
 typedef enum
 {
     USLIrisTypeCircle = 0,
-    USLIrisTypeHeart,
+    USLIrisTypePentagon,
+    USLIrisTypeHexagon,
 } USLIrisType;
 
 /**

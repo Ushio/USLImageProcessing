@@ -25,6 +25,7 @@
     IBOutlet NSSlider *_blurRadiusSlider;
     IBOutlet NSSlider *_optimizeScaleSlider;
     IBOutlet NSSlider *_fechnerConstantSlider;
+    IBOutlet NSSegmentedControl *_irisSegmentedControl;
     
     IBOutlet NSImageView *_srcImageView;
     IBOutlet NSImageView *_dstImageView;
@@ -33,6 +34,7 @@
     float _blurRadius;
     float _optimizeScale;
     float _fechnerConstant;
+    USLIrisType _irisType;
     
     CGImageRef _image;
     NSBitmapImageRep *_processedImage;
@@ -43,6 +45,7 @@
     [self didChangeBlurRadius:_blurRadiusSlider];
     [self didChangeOptimizeScale:_optimizeScaleSlider];
     [self didChangeFechnerConstantSlider:_fechnerConstantSlider];
+    [self didChangeIrisSegmentedControl:_irisSegmentedControl];
 }
 - (IBAction)load:(id)sender
 {
@@ -112,15 +115,30 @@
     
     [self updateImage];
 }
+- (IBAction)didChangeIrisSegmentedControl:(id)sender
+{
+    switch (_irisSegmentedControl.selectedSegment) {
+        case 0:
+            _irisType = USLIrisTypeCircle;
+            break;
+        case 1:
+            _irisType = USLIrisTypePentagon;
+            break;
+        case 2:
+            _irisType = USLIrisTypeHexagon;
+            break;
+    }
+    [self updateImage];
+}
 - (void)updateImage
 {
     if(_image)
     {
         USLOpticalBlurKernel *kernel = [[USLOpticalBlurKernel alloc] initWithWidth:_kernelSize
                                                                             height:_kernelSize];
-        [kernel setGaussianWithRadius:_blurRadius iris:USLIrisTypeCircle];
+        [kernel setGaussianWithRadius:_blurRadius iris:_irisType];
         [USLImageProcessor opticalBlurWithCGImage:_image
-                                           kernel:kernel.optimized
+                                           kernel:kernel
                                   fechnerConstant:_fechnerConstant
                                   optimizeByScale:_optimizeScale reciver:^(CGImageRef bluredImage) {
                                       _processedImage = [[NSBitmapImageRep alloc] initWithCGImage:bluredImage];

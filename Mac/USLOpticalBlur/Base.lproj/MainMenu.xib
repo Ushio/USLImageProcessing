@@ -649,14 +649,14 @@
         <window title="USLOpticalBlur" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="473"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="492"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="473"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="492"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" id="vM7-lm-xIe">
-                        <rect key="frame" x="9" y="439" width="92" height="32"/>
+                        <rect key="frame" x="9" y="458" width="92" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="読み込む" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aCw-Xx-F29">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -667,7 +667,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="6TV-gD-HPt">
-                        <rect key="frame" x="9" y="413" width="92" height="32"/>
+                        <rect key="frame" x="9" y="432" width="92" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="書き出す" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4jW-CY-glv">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -678,7 +678,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8yc-OU-Qoq">
-                        <rect key="frame" x="103" y="448" width="359" height="17"/>
+                        <rect key="frame" x="103" y="467" width="359" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="eN6-aN-n69">
                             <font key="font" metaFont="system"/>
@@ -687,17 +687,17 @@
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="SH9-ZW-K5c">
-                        <rect key="frame" x="15" y="133" width="215" height="279"/>
+                        <rect key="frame" x="15" y="152" width="215" height="279"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="JY8-0m-nuW"/>
                     </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uMn-e4-X3m">
-                        <rect key="frame" x="250" y="133" width="215" height="279"/>
+                        <rect key="frame" x="250" y="152" width="215" height="279"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="2af-Kx-y6m"/>
                     </imageView>
                     <slider verticalHuggingPriority="750" id="OtJ-J4-DGW">
-                        <rect key="frame" x="124" y="93" width="283" height="21"/>
+                        <rect key="frame" x="124" y="112" width="283" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="GOK-bI-mSw"/>
                         <connections>
@@ -705,7 +705,7 @@
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="W0j-PI-RGk">
-                        <rect key="frame" x="13" y="95" width="95" height="17"/>
+                        <rect key="frame" x="13" y="114" width="95" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="カーネルサイズ" id="wlh-Fj-7jH">
                             <font key="font" size="13" name="AquaKana"/>
@@ -714,15 +714,15 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" id="Rcd-K5-BWJ">
-                        <rect key="frame" x="124" y="43" width="283" height="21"/>
+                        <rect key="frame" x="124" y="62" width="283" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.75" tickMarkPosition="above" sliderType="linear" id="Kah-2n-eys"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="Kah-2n-eys"/>
                         <connections>
                             <action selector="didChangeOptimizeScale:" target="xgR-Gt-KoV" id="d46-Ua-5Oh"/>
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bcp-Xx-qe4">
-                        <rect key="frame" x="13" y="70" width="69" height="17"/>
+                        <rect key="frame" x="13" y="89" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ぼかし半径" id="TcD-tA-y3Y">
                             <font key="font" size="13" name="AquaKana"/>
@@ -731,7 +731,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4HX-Pl-gm2">
-                        <rect key="frame" x="13" y="45" width="56" height="17"/>
+                        <rect key="frame" x="13" y="64" width="56" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="スケール" id="O5P-sA-MmK">
                             <font key="font" size="13" name="AquaKana"/>
@@ -740,7 +740,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="JhE-ur-wrS">
-                        <rect key="frame" x="13" y="20" width="95" height="17"/>
+                        <rect key="frame" x="13" y="39" width="95" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="フェヒナー定数" id="wRR-zT-ePt">
                             <font key="font" size="13" name="AquaKana"/>
@@ -749,7 +749,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="PTk-s9-JrZ">
-                        <rect key="frame" x="411" y="95" width="56" height="17"/>
+                        <rect key="frame" x="411" y="114" width="56" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="GRK-Pv-e0q">
                             <font key="font" size="13" name="AquaKana"/>
@@ -758,7 +758,7 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" id="g0t-fV-bww">
-                        <rect key="frame" x="124" y="68" width="283" height="21"/>
+                        <rect key="frame" x="124" y="87" width="283" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="FTu-XI-HR6"/>
                         <connections>
@@ -766,7 +766,7 @@
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7k1-O7-rca">
-                        <rect key="frame" x="411" y="70" width="56" height="17"/>
+                        <rect key="frame" x="411" y="89" width="56" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="Trk-RO-nA1">
                             <font key="font" size="13" name="AquaKana"/>
@@ -775,7 +775,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Fd-5y-I1J">
-                        <rect key="frame" x="411" y="45" width="56" height="17"/>
+                        <rect key="frame" x="411" y="64" width="56" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="Nhh-aR-6tv">
                             <font key="font" size="13" name="AquaKana"/>
@@ -784,7 +784,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wf5-BX-geT">
-                        <rect key="frame" x="411" y="20" width="56" height="17"/>
+                        <rect key="frame" x="411" y="39" width="56" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="ZAY-e8-udB">
                             <font key="font" size="13" name="AquaKana"/>
@@ -793,13 +793,37 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" id="MOc-CY-hRf">
-                        <rect key="frame" x="124" y="18" width="283" height="21"/>
+                        <rect key="frame" x="124" y="37" width="283" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.29999999999999999" tickMarkPosition="above" sliderType="linear" id="VY7-eG-JzK"/>
                         <connections>
                             <action selector="didChangeFechnerConstantSlider:" target="xgR-Gt-KoV" id="oze-yq-kJ7"/>
                         </connections>
                     </slider>
+                    <segmentedControl verticalHuggingPriority="750" id="xqc-Fk-BoG">
+                        <rect key="frame" x="126" y="5" width="185" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="e0M-YM-DZ2">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment label="　円　"/>
+                                <segment label="五角形" selected="YES" tag="1"/>
+                                <segment label="六角形"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="didChangeIrisSegmentedControl:" target="xgR-Gt-KoV" id="gET-r8-o9g"/>
+                        </connections>
+                    </segmentedControl>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Cxw-Es-HGL">
+                        <rect key="frame" x="13" y="9" width="56" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="絞り形状" id="1zR-9H-iaQ">
+                            <font key="font" size="13" name="AquaKana"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
@@ -816,6 +840,7 @@
                 <outlet property="_dstImageView" destination="uMn-e4-X3m" id="fIO-g6-4hp"/>
                 <outlet property="_fechnerConstantSlider" destination="MOc-CY-hRf" id="CLx-mc-bOb"/>
                 <outlet property="_fechnerConstantTextField" destination="wf5-BX-geT" id="MGD-5Q-4a0"/>
+                <outlet property="_irisSegmentedControl" destination="xqc-Fk-BoG" id="u5z-2C-F4p"/>
                 <outlet property="_kernelSizeSlider" destination="OtJ-J4-DGW" id="tKk-Gt-hbl"/>
                 <outlet property="_kernelSizeTextField" destination="PTk-s9-JrZ" id="sMd-Ij-ros"/>
                 <outlet property="_optimizeScaleSlider" destination="Rcd-K5-BWJ" id="DJg-Xn-TtD"/>

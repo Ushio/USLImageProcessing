@@ -32,7 +32,7 @@
     USLOpticalBlurKernel *kernel = [[USLOpticalBlurKernel alloc] initWithWidth:41 height:41];
     
     NSDate *date = [NSDate date];
-    [kernel setGaussianWithRadius:50.0 iris:USLIrisTypeCircle];
+    [kernel setGaussianWithRadius:50.0 iris:USLIrisTypePentagon];
     [USLImageProcessor opticalBlurWithCGImage:srcImage
                                        kernel:kernel.optimized
                               fechnerConstant:kFechnerConstantDefault
