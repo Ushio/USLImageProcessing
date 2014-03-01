@@ -106,7 +106,6 @@
 + (void)intensityToPhysicalQuantity:(USLVImageBufferRGBFFF *)image fechnerConstant:(float)fechnerConstant
 {
     // R = 10^(E/C)
-    
     float divide = 1.0f / fechnerConstant;
     vImage_Buffer *vImageBuffers[] = {image.vImageBufferR, image.vImageBufferG, image.vImageBufferB};
     int length = (int)vImageBuffers[0]->width;
